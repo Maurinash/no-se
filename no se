@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi primera web</title>
+</head>
+<body>
+    <!--UL ES LISTA NO ORDENADA-->
+    <ul>
+        <li> Elemento 1</li>
+        <li> Elemento 1</li>
+        <li> Elemento 1</li>
+        <li> Elemento 1</li>
+    </ul>
+    <ol>
+        <!--Ol es lista ordenada-->
+        <li> Elemento 1</li>
+        <li> Elemento 1</li>
+        <li> Elemento 1</li>
+        <li> Elemento 1</li>
+        
+    </ol>
+
+
+
+    <form action=/formulario method="post">
+        <label form="Apellido">Nombre</label>
+        <input type="text" name="Apellido" placeholder="chanchito triste...">
+        <br>
+        <label for="comentario" >Comentario</label>
+        <textarea cols="50" rows="10" id="comentario" placeholder="Inglese comentario" name="Comentario"></textarea>
+        <br>
+        <button type="button"img src="" alt="img descarga"></button>>tipo boton</button>
+        <button type="reset">tipo boton</button>
+        <button type="submit">tipo boton</button>
+
+        </form>
+    <h1>Mi primer heading</h1>
+    <h2>Mi segundo heading</h2>
+    <h3>Mi tercer heading</h3>
+    <h4>Mi Cuarto heading</h4>
+    <h5>Mi quinto heading</h5>
+    <h6>Chanchito feliz nashei</h6>
+    <h7>LALALa</h7>
+    <p>Chanchito feliz est[a muy feliz</p>
+    <p> Chanchito triste nashent</p>
+    <h2> chanchito feliz</h2>
+    <p> un nashento SDJKASDHKASJDHKASDHKAJSHSD<br><br>ASMDASKJDHJKASDHJKASHJKDHAJSKDHJKASHDJKAHSDjHKJASHDKJADDHKAS queaa grande nashe 
+        <span style="color: blue;"> NASHE</span>
+    </p>
+    <a target="_blank" href="https://www.google.com/?hl=en">Ir a google</a>
+    <!-- este texto es un comentario y
+         no va a aparecer en el explorador-->
+    <img src="img/descarga.jpeg" height="400">
+
+    <title>Comentarios Anónimos</title>
+</head>
+<body>
+    <h1>Comentarios Anónimos</h1>
+    
+    <!-- Formulario para ingresar comentarios -->
+    <form id="comment-form">
+        <label for="comment">Deja tu comentario:</label>
+        <textarea id="comment" rows="4" cols="50"></textarea>
+        <button type="button" id="submit-button">Enviar</button>
+    </form>
+
+    <!-- Lista de comentarios -->
+    <div id="comments">
+        <h2>Comentarios:</h2>
+        <ul id="comment-list">
+        </ul>
+    </div>
+
+    <script>
+        // Función para agregar un comentario a la lista
+        function addComment() {
+            var commentText = document.getElementById("comment").value;
+            if (commentText.trim() !== "") {
+                var commentList = document.getElementById("comment-list");
+                var newComment = document.createElement("li");
+                newComment.textContent = commentText;
+                commentList.appendChild(newComment);
+                document.getElementById("comment").value = "";
+            }
+        }
+
+        // Asociar el evento "click" al botón de enviar
+        document.getElementById("submit-button").addEventListener("click", addComment);
+    </script>
+</body>
+</html>
